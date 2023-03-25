@@ -20,6 +20,9 @@ spec:
     targetRevision: "*"
     helm:
       releaseName: mongodb
+      parameters:
+      - name: persistence.storageClass
+        value: longhorn
   destination:
     server: "https://kubernetes.default.svc"
     namespace: db-system
